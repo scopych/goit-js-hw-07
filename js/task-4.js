@@ -10,11 +10,11 @@ function validator(event) {
   const password = event.target.elements.password.value.trim();
   if (email === '' || password === '') {
     alert('All form fields must be filled in');
+  } else {
+    result.email = email;
+    result.password = password;
+
+    console.log(result);
+    form.reset();
   }
-
-  result.email = email;
-  result.password = password;
-
-  console.log(result);
-  form.reset();
 }
